@@ -1,16 +1,24 @@
 public class App {
-    public static void main(String[] args)  {
+
+    public static void main(String[] args) {
         int n = 5;
-        int resultadofinal = factorial(n);
-        System.out.println("resultado: " + resultadofinal);
+        int resultadoFinal = factorial(n);
+        System.out.println("Factorial de " + n + ": " + resultadoFinal);
+        activar(n);
     }
     public static int factorial(int n) {
-        if(n==0) {
-            System.out.println("Alncaze el caso base");
-            return  1;
+        if (n == 0) {
+            return 1;
         }
-        int resultado = n * factorial(n -1 );
-        System.out.println("Calculando factorial de " + n + " * factorias("+(n-1)+"-1)");
-        return resultado;
+        return n * factorial(n - 1);
+    }
+    public static void activar(int n) {
+        EjercicioRecursividada ejercicio = new EjercicioRecursividada();
+
+        int resultadoFibo = ejercicio.fibonacci(n);
+        System.out.println("Fibonacci de " + n + ": " + resultadoFibo);
+
+        int resultadoSuma = ejercicio.sumaConsecutivos(n);
+        System.out.println("Suma de 1 hasta " + n + ": " + resultadoSuma);
     }
 }
