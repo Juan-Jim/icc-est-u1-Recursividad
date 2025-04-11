@@ -25,8 +25,14 @@ public class App {
         EjercicioRecursividada decen = new  EjercicioRecursividada();
         int resultadodecen = decen.decendente(decendente);
         System.out.println( resultadodecen);
-        
+
         System.out.println("----------------------");
+
+        int num = 1234;
+        EjercicioRecursividada eR = new EjercicioRecursividada();
+        System.out.println("Imprimir reverso");
+        int reverso = eR.reverso(num);
+        System.out.println(reverso);
     }
     public static int factorial(int n) {
         if (n == 0) {

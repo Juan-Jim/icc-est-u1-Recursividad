@@ -44,4 +44,19 @@ public class EjercicioRecursividada {
             return  decendente(n-1);
         }
     }
+
+    public int reverso(int n) {
+        return reversoAux(n, 0);
+    }
+    
+    public int reversoAux(int n, int invertido) {
+
+        if (n == 0) {
+            return invertido;
+        } else {
+            int ultimoDigito = n % 10;
+            int nuevoInvertido = invertido * 10 + ultimoDigito;
+            return reversoAux(n / 10, nuevoInvertido);
+        }
+    }
 }
