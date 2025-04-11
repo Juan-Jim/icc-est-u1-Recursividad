@@ -35,4 +35,13 @@ public class EjercicioRecursividada {
         }
         
     } 
+
+    public int decendente(int n) {
+        if (n == 1) {
+            return n;
+        }else{
+            System.out.print(n + ", ");
+            return  decendente(n-1);
+        }
+    }
 }

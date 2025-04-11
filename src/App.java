@@ -5,18 +5,28 @@ public class App {
         int resultadoFinal = factorial(n);
         System.out.println("Factorial de " + n + ": " + resultadoFinal);
         activar(n);
+        System.out.println("----------------------");
 
         int base = 2;
         int exponente = 3;
-
         EjercicioRecursividada potencia = new EjercicioRecursividada();
         int resultado = potencia.elevado(base, exponente);
         System.out.println("la potencia de: " + base + " es: " + resultado);
+        System.out.println("----------------------");
 
         int numero = 124;
         EjercicioRecursividada ultimo = new EjercicioRecursividada();
         int resultadonumero = ultimo.devolver(numero);
         System.out.println("El resultado final es: " + resultadonumero);
+        System.out.println("----------------------");
+
+        System.out.println("La forma decendente es: ");
+        int decendente = 10;
+        EjercicioRecursividada decen = new  EjercicioRecursividada();
+        int resultadodecen = decen.decendente(decendente);
+        System.out.println( resultadodecen);
+        
+        System.out.println("----------------------");
     }
     public static int factorial(int n) {
         if (n == 0) {
